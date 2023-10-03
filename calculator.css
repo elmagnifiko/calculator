@@ -1,0 +1,533 @@
+body {
+    width: 500px;
+    margin: 4% auto;
+    font-family: 'League Spartan';
+    letter-spacing: 5px;
+    font-size: 1.8rem;
+    background: hsl(222, 26%, 31%);
+    letter-spacing: 0px;
+    
+  }
+
+  .one {
+    background-color: red;
+     height: 10px;width: 10px;
+      border-radius: 10px;
+  }
+
+  .two {
+    background-color: orange;
+     height: 10px;width: 10px;
+      border-radius: 10px;
+      
+  }
+  
+  .three {
+    background-color: aqua; 
+    height: 10px;width: 10px; 
+    border-radius: 10px;
+  }
+  .calculator0 {
+    padding: 20px;
+    height: 700px ;
+  }
+
+  .calculator0 .calculatrice , .theme {
+    display: flex;
+    justify-content: space-between;
+    color:white !important;
+  }
+
+
+  .calculator0 .theme  {
+    display: flex;
+    justify-content: space-between;
+    background-color: hsl(223, 31%, 20%);;
+    width: 60px;
+    padding: 0 2px 0 2px;
+    height: 10px;
+    margin-top: 60px;
+    border-radius: 10px;
+    margin-right: 10px;
+  }
+  
+  .calculator0 .input  {
+    border: 1px solid hsl(222, 26%, 31%);
+    border-radius: 10px;
+    color: white;
+    height: 100px;
+    padding-right: 15px;
+    padding-top: 10px;
+    text-align: right;
+    margin-right: 6px;
+    font-size: 2.5rem;
+    overflow-x: auto;
+    transition: all .2s ease-in-out;
+    background-color: hsl(224, 36%, 15%);;
+  }
+  
+  .calculator0 .input:hover {
+    border: 1px solid #bbb;
+
+    -webkit-box-shadow: inset 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: inset 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
+  }
+  
+  .calculator0 .buttons {
+    width: 410px;
+    border: 1px hsl(222, 26%, 31%) solid;
+    padding: 20px;
+    margin-top: 30px;
+    border-radius: 10px;
+    background-color: hsl(223, 31%, 20%);
+    
+  }
+  
+   .calculator0 .operators div {
+    display: inline-block;
+    border: 1px solid #bbb;
+    border-radius: 1px;
+    width: 80px;
+    text-align: center;
+    padding: 10px;
+    margin: 20px 4px 10px 0;
+    cursor: pointer;
+    background-color: #ddd;
+    transition: border-color .2s ease-in-out, background-color .2s, box-shadow .2s;
+  } 
+  
+  .calculator0 .operators div:hover {
+    background-color: #ddd;
+    -webkit-box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
+    border-color: #aaa;
+  }
+  
+  .calculator0 .operators div:active {
+    font-weight: bold;
+  }
+  
+  .calculator0 .leftPanel {
+    display: inline-block;
+    
+  }
+  
+  .calculator0 .numbers div , .calculator0 .numbers p {
+    color: hsl(221, 14%, 31%);
+    display: inline-block;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    width: 66px;
+    font-size: 32px;
+    text-align: center;
+    padding: 10px;
+    margin: 10px 6px 10px 0;
+    cursor: pointer;
+    box-shadow: 0px 3px 0px 0px hsl(222, 26%, 31%);
+    background-color: #f9f9f9;
+    transition: border-color .2s ease-in-out, background-color .2s, box-shadow .2s;
+  }
+  
+  .calculator0 .numbers div:hover {
+    background-color: #f1f1f1;
+    -webkit-box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
+    border-color: #bbb;
+  }
+  
+  .calculator0 .numbers div:active {
+    font-weight: bold;
+  }
+  
+  .calculator0 .equal {
+    display: inline-block;
+    border: 1px solid hsl(25, 98%, 40%);
+    border-radius: 10px;
+    width: 40%;
+    text-align: center;
+    padding: 12px;
+    margin: 10px 6px 10px 0;
+    vertical-align: top;
+    cursor: pointer;
+    color: #FFF;
+    box-shadow: 0px 6px 0px 0px hsla(25, 98%, 40%, 0.298);;
+    background-color: hsl(25, 98%, 40%);
+    transition: all .2s ease-in-out;
+  }
+
+
+  .calculator0 div.reset {
+    background-color: hsl(27, 76%, 26%);
+    font-size: 32px;
+    display: inline-block;
+    border: 1px solid hsl(187.89,42.22%,35.29%);
+    border-radius: 10px;
+    width: 40%;
+    text-align: center;
+    padding: 12px;
+    margin: 10px 6px 10px 0;
+    vertical-align: top;
+    cursor: pointer;
+    color: #FFF;
+    background-color:hsl(187.89,42.22%,35.29%);
+    box-shadow: 0px 3px 0px 0px hsl(222, 26%, 31%);
+    transition: all .2s ease-in-out;
+  }
+
+  .calculator0  div#clear {
+    background-color:hsl(187.89,42.22%,35.29%);
+    border: 1px solid hsl(187.89,42.22%,35.29%);
+    color: hsl(0, 0%, 100%);
+    font-size: 32px;
+  }
+
+  .calculator0 #titre , .calculator0 #theme {
+    color: white !important;
+    }
+
+
+
+  
+
+
+
+
+
+/* second theme  */
+
+
+
+
+
+
+.calculator1 {
+  padding: 20px;
+  height: 700px ;
+  background: hsl(0, 0%, 90%);
+}
+
+.calculator1 .calculatrice , .theme {
+  display: flex;
+  justify-content: space-between;
+}
+
+.calculator1 .theme {
+  display: flex;
+  justify-content: space-between;
+  background-color: hsl(0, 5%, 81%);
+  width: 60px;
+  padding: 0 2px 0 2px;
+  height: 10px;
+  margin-top: 60px;
+  border-radius: 10px;
+  margin-right: 10px;
+}
+.calculator1 #titre , .calculator1 #theme {
+color: hsl(60, 10%, 19%) !important;
+}
+.calculator1 .input  {
+  border: 1px solid hsl(0, 0%, 93%);
+  border-radius: 10px;
+  color: hsl(60, 10%, 19%);
+  height: 100px;
+  padding-right: 15px;
+  padding-top: 10px;
+  text-align: right;
+  margin-right: 6px;
+  font-size: 2.5rem;
+  overflow-x: auto;
+  transition: all .2s ease-in-out;
+  background-color: hsl(0, 0%, 93%);
+}
+
+.calculator1 .input:hover {
+  border: 1px solid #bbb;
+
+  -webkit-box-shadow: inset 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: inset 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
+}
+
+.calculator1 .buttons {
+  width: 410px;
+  border: 1px hsl(0, 5%, 81%) solid;
+  padding: 20px;
+  margin-top: 30px;
+  border-radius: 10px;
+  background-color: hsl(0, 5%, 81%);
+}
+
+
+.calculator1 .operators div {
+  display: inline-block;
+  border: 1px solid #bbb;
+  border-radius: 1px;
+  width: 80px;
+  text-align: center;
+  padding: 10px;
+  margin: 20px 4px 10px 0;
+  cursor: pointer;
+  background-color: #ddd;
+  transition: border-color .2s ease-in-out, background-color .2s, box-shadow .2s;
+}
+
+.calculator1 .operators div:hover {
+  background-color: #ddd;
+  -webkit-box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
+  border-color: #aaa;
+}
+
+.calculator1 .operators div:active {
+  font-weight: bold;
+}
+
+.calculator1 .leftPanel {
+  display: inline-block;
+  
+}
+
+
+.calculator1 .numbers div , .calculator1 .numbers p{
+  color: hsl(60, 10%, 19%);
+  display: inline-block;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  width: 66px;
+  font-size: 32px;
+  text-align: center;
+  padding: 10px;
+  margin: 10px 6px 10px 0;
+  cursor: pointer;
+  box-shadow: 0px 3px 0px 0px hsl(35, 11%, 61%);
+  background-color: #f9f9f9;
+  transition: border-color .2s ease-in-out, background-color .2s, box-shadow .2s;
+}
+
+.calculator1 .numbers p {
+  background-color:hsl(187.89,42.22%,35.29%);
+  color: #FFF;
+  box-shadow: 0px 3px 0px 0px hsl(222, 26%, 31%);
+  border: 1px solid hsl(187.89,42.22%,35.29%);
+}
+
+.calculator1 .numbers div:hover {
+  background-color: #f1f1f1;
+  -webkit-box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
+  border-color: #bbb;
+}
+
+.calculator1 .numbers div:active {
+  font-weight: bold;
+}
+
+.calculator1 .equal {
+  display: inline-block;
+  border: 1px solid hsl(25, 98%, 40%);
+  border-radius: 10px;
+  width: 40%;
+  text-align: center;
+  padding: 12px;
+  margin: 10px 6px 10px 0;
+  vertical-align: top;
+  cursor: pointer;
+  color: #FFF;
+  box-shadow: 0px 6px 0px 0px hsl(25, 98%, 33%);;
+  background-color: hsl(25, 98%, 40%);
+  transition: all .2s ease-in-out;
+}
+
+
+.calculator1 div.reset {
+  background-color: hsl(27, 76%, 26%);
+  font-size: 32px;
+  display: inline-block;
+  border: 1px solid hsl(187.89,42.22%,35.29%);
+  border-radius: 10px;
+  width: 40%;
+  text-align: center;
+  padding: 12px;
+  margin: 10px 6px 10px 0;
+  vertical-align: top;
+  cursor: pointer;
+  color: #FFF;
+  background-color:hsl(187.89,42.22%,35.29%);
+  box-shadow: 0px 3px 0px 0px hsl(222, 26%, 31%);
+  transition: all .2s ease-in-out;
+}
+
+.calculator1  div#clear {
+  background-color:hsl(187.89,42.22%,35.29%);
+  border: 1px solid hsl(187.89,42.22%,35.29%);
+  color: hsl(0, 0%, 100%);
+  font-size: 32px;
+}
+
+
+/* dernier theme  */
+
+
+
+
+
+.calculator2 {
+  padding: 20px;
+  height: 700px ;
+  background:  hsl(268, 75%, 9%);
+}
+
+.calculator2 .calculatrice , .theme {
+  display: flex;
+  justify-content: space-between;
+  color:hsl(52, 100%, 62%);
+}
+
+.calculator2 .theme {
+  display: flex;
+  justify-content: space-between;
+  background-color: hsl(223, 31%, 20%);;
+  width: 60px;
+  padding: 0 2px 0 2px;
+  height: 10px;
+  margin-top: 60px;
+  border-radius: 10px;
+  margin-right: 10px;
+  
+}
+
+#titre , #theme {
+ color:hsl(52, 100%, 62%) !important ;;
+}
+
+
+.calculator2 .input  {
+  border: 1px solid hsl(268, 71%, 12%);
+  border-radius: 10px;
+  height: 100px;
+  color:  hsl(52, 100%, 62%);
+  padding-right: 15px;
+  padding-top: 10px;
+  text-align: right;
+  margin-right: 6px;
+  font-size: 2.5rem;
+  overflow-x: auto;
+  transition: all .2s ease-in-out;
+  background-color: hsl(268, 71%, 12%);
+}
+
+.calculator2 .input:hover {
+  border: 1px solid #bbb;
+
+  -webkit-box-shadow: inset 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: inset 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
+}
+
+.calculator2 .buttons {
+  width: 410px;
+  border: 1px hsl(268, 71%, 12%) solid;
+  padding: 20px;
+  margin-top: 30px;
+  border-radius: 10px;
+  background-color: hsl(268, 71%, 12%);
+}
+
+.calculator2 .operators div {
+  display: inline-block;
+  border: 1px solid #bbb;
+  border-radius: 1px;
+  width: 80px;
+  text-align: center;
+  padding: 10px;
+  margin: 20px 4px 10px 0;
+  cursor: pointer;
+  background-color: #ddd;
+  transition: border-color .2s ease-in-out, background-color .2s, box-shadow .2s;
+}
+
+.calculator2 .operators div:hover {
+  background-color: #ddd;
+  -webkit-box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
+  border-color: #aaa;
+}
+
+.calculator2 .operators div:active {
+  font-weight: bold;
+}
+
+.calculator2 .leftPanel {
+  display: inline-block;
+  
+}
+
+.calculator2 .numbers div , .calculator2 .numbers p{
+  color:  hsl(52, 100%, 62%);
+  display: inline-block;
+  border: 1px solid  hsl(281, 89%, 26%);
+  border-radius: 10px;
+  width: 66px;
+  font-size: 32px;
+  text-align: center;
+  padding: 10px;
+  margin: 10px 6px 10px 0;
+  cursor: pointer;
+  box-shadow: 0px 3px 0px 0px hsl(285, 91%, 52%);
+  background-color:  hsl(281, 89%, 26%);
+  transition: border-color .2s ease-in-out, background-color .2s, box-shadow .2s;
+}
+.calculator2 .numbers p{
+  color: white;
+}
+
+.calculator2 .numbers div:hover {
+  background-color: #f1f1f1;
+  -webkit-box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
+  border-color: #bbb;
+}
+
+.calculator2 .numbers div:active {
+  font-weight: bold;
+}
+
+.calculator2 .equal {
+  display: inline-block;
+  border: 1px solid hsl(176, 100%, 44%);
+  border-radius: 10px;
+  width: 40%;
+  text-align: center;
+  padding: 12px;
+  margin: 10px 6px 10px 0;
+  vertical-align: top;
+  cursor: pointer;
+  color: #FFF;
+  box-shadow: 0px 6px 0px 0px hsla(176, 97%, 47%, 0.608);
+  background-color: hsl(176, 100%, 44%);
+  transition: all .2s ease-in-out;
+}
+
+
+.calculator2 div.reset {
+  font-size: 32px;
+  display: inline-block;
+  border: 1px solid  hsl(268, 47%, 21%);
+  border-radius: 10px;
+  width: 40%;
+  text-align: center;
+  padding: 12px;
+  margin: 10px 6px 10px 0;
+  vertical-align: top;
+  cursor: pointer;
+  color: #FFF;
+  background-color:  hsl(268, 47%, 21%);
+  box-shadow: 0px 3px 0px 0px hsl(290, 70%, 36%);
+  transition: all .2s ease-in-out;
+}
+
+.calculator2  div#clear {
+  background-color:hsl(268, 47%, 21%);
+  border: 1px solid hsl(268, 47%, 21%);
+  color: hsl(0, 0%, 100%);
+  font-size: 32px;
+}
+
