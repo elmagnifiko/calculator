@@ -1,9 +1,8 @@
 "use strict";
-
-let input = document.getElementById('input'), 
+let input = document.getElementById('input'),
   number = document.querySelectorAll('.numbers div'),
-  operator = document.querySelectorAll('.operators div'), 
-  result = document.getElementById('result'), 
+  operatorE = document.querySelectorAll('.operators div'),
+  result = document.getElementById('result'),
   clear = document.getElementById('clear'),
   resultDisplayed = false,
   efface = document.querySelector('.numbers p'),
@@ -11,32 +10,121 @@ let input = document.getElementById('input'),
   two = document.querySelector('.two'),
   three = document.querySelector('.three'),
   calculator = document.querySelector('.calculator0')
-   
-  two.classList.remove('two');
-  three.classList.remove('three');
 
-for (let i = 0; i < number.length; i++) {
-  number[i].addEventListener("click", function(e) {
-    input.innerHTML += e.target.innerHTML
-  });
-};
+two.classList.remove('two');
+three.classList.remove('three');
 
-result.addEventListener('click' , function(){
-  try {
-    input.innerHTML = eval(input.textContent);
-  } catch (error) {
-    input.innerHTML = 'error'
+let currentInput = '0';
+let operator = null;
+let prevInput = '0';
+let prevResult = null;
+
+function updateDisplay() {
+  input = document.getElementById('input');
+  input.textContent = currentInput;
+}
+
+function appendNumber(number) {
+  if (currentInput === '0' || resultDisplayed) {
+    currentInput = number;
+    resultDisplayed = false;
+  } else {
+    currentInput += number;
   }
-});
+  updateDisplay();
+}
 
-clear.addEventListener("click", function() {
-  input.innerHTML = "";
-});
+function appendDecimal() {
+  if (!currentInput.includes('.')) {
+    currentInput += '.';
+  }
+  updateDisplay();
+}
+
+function setOperator(op) {
+    if (operator && !resultDisplayed) {
+      calculateResult();
+    } else if (resultDisplayed) {
+      prevResult = parseFloat(currentInput);
+    }
+    operator = op;
+    prevInput = currentInput;
+    currentInput = '0';
+    resultDisplayed = false;
+    updateDisplay();
+  }
+  
+function deleteLastCharacter() {
+  currentInput = currentInput.slice(0, -1);
+  operator = null;
+  prevInput = '0';
+  prevResult = null;
+  updateDisplay();
+}
+
+function clearDisplay() {
+  currentInput = '0';
+  operator = null;
+  prevInput = '0';
+  prevResult = null;
+  updateDisplay();
+}
+
+function calculateResult() {
+  const num1 = parseFloat(prevResult !== null ? prevResult : prevInput);
+  const num2 = parseFloat(currentInput);
+
+  switch (operator) {
+    case '+':
+      currentInput = (num1 + num2).toString();
+      break;
+    case '-':
+      currentInput = (num1 - num2).toString();
+      break;
+    case '*':
+      currentInput = (num1 * num2).toString();
+      break;
+    case '/':
+      currentInput = (num1 / num2).toString();
+      break;
+    default:
+      break;
+  }
+
+  operator = null;
+  prevInput = currentInput;
+  prevResult = parseFloat(currentInput);
+  resultDisplayed = true;
+  updateDisplay();
+}
+
+updateDisplay();
 
 
-efface.addEventListener('click', function() {
-  input.innerHTML = input.innerHTML.slice(0, -1);
-});
+
+
+// for (let i = 0; i < number.length; i++) {
+//   number[i].addEventListener("click", function(e) {
+//     input.innerHTML += e.target.innerHTML
+//   });
+// };
+
+// result.addEventListener('click' , function(){
+//   try {
+//     input.innerHTML = eval(input.textContent);
+//   } catch (error) {
+//     input.innerHTML = 'error'
+//   }
+// });
+
+// clear.addEventListener("click", function() {
+//   input.innerHTML = "";
+// });
+
+
+// efface.addEventListener('click', function() {
+//   input.innerHTML = input.innerHTML.slice(0, -1);
+// });
 
 
 one.addEventListener('click', function() {
